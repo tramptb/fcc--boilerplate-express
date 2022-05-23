@@ -1,1 +1,1 @@
-# fcc--boilerplate-express
+# fcc-boilerplate-express
