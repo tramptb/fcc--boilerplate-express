@@ -6,14 +6,14 @@ let app = express();
  res.send('Hello Express');
 });*/
 //const absolutePath = __dirname + '/views/index.html';
-let response  = "Hello json";
-if(process.env.MESSAGE_STYLE === 'uppercase'){
-    response = response.toUpperCase();
-}
+
 
 app.get("/json", function (req, res) {
-
-    res.json({"message": response});
+    if (process.env['MESSAGE_STYLE'] === "uppercase") {
+        res.json({"message":"Hello json".toUpperCase()})
+    }else {
+        res.json({"message": "Hello json"});
+    }
 });
 /*app.use('/public', express.static(__dirname + "/public"));*/
 
