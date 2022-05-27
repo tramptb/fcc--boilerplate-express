@@ -4,10 +4,10 @@ let app = express();
 /*app.get("/", function(req, res) {
  res.send('Hello Express');
 });*/
-/*const absolutePath = __dirname + '/views/index.html';
-app.get("/", function (req, res) {
-    res.sendFile(absolutePath);
-});*/
-app.use('/public', express.static(__dirname + "/public"));
+const absolutePath = __dirname + '/views/index.html';
+app.get("/json", function (req, res) {
+    res.json({"message": "Hello json"});
+});
+/*app.use('/public', express.static(__dirname + "/public"));*/
 
 module.exports = app;
